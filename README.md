@@ -5,3 +5,7 @@ mhddfs /data01,/data02,/data03,/data04,/data05,/data06,/data07,/data08,/data09,/
 
 2. Change hostname
 hostnamectl set-hostname aln-rancher
+
+3. Tạo SSH key và cấu hình kết nối SSH
+ssh-keygen
+ssh-copy-id aln-master1 
