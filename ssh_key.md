@@ -21,7 +21,14 @@ ssh-keygen -t rsa
 
 Kết quả lệnh trên bạn đã có:
 Private Key chứa trong file ~/.ssh/id_rsa, hãy lưu lại cẩn thận, nó được dùng để SSH client (máy local) kết nối đến Server. Mở file này ra, đoạn mã Private Key có dạng
-Public Key chứa trong file ~/.ssh/id_rsa.pub, hãy copy nội dung bên trong file - giữ cận thận, Nó được lưu (dùng) ở máy Server để xác thực khi có Private key gửi đến. Nếu mở file này ra, thì nội dung mã Public key nhìn thấy có dạng:
+Public Key chứa trong file ~/.ssh/id_rsa.pub, hãy copy nội dung bên trong file - giữ cận thận, Nó được lưu (dùng) ở máy Server để xác thực khi có Private key gửi đến. Nếu mở file này ra, thì nội dung mã Public key nhìn thấy có dạng
+
+Tạo file authorized_keys
+```
+cd .ssh
+cat id_rsa.pub > authorized_keys
+chmod 600 authorized_keys 
+```
 
 # Xác thực bằng SSH Key
 Khi SSH Server bật chế độ cho phép xác sự bằng SSH Key, thì tại Server cấu hình để nó nhận biết có Public Key lưu ở file nào đó trên Server. Sau đó, ở máy Client (local) khi kết nối sẽ gửi Private Key lên, nếu nó kiểm tra thấy phù hợp giữa Public Key và Private Key thì cho kết nối.
