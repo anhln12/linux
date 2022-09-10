@@ -26,3 +26,7 @@ for i in `find . -type d `; do echo `ls -a $i | wc -l` $i; done | sort -n
 hoặc
 
 for i in /home/* `ls -1b`; do c=`find $i -type f |wc -l`; echo "$c $i"; done;
+
+
+vòng lặp:
+while sleep 1; do ./better-top.sh; done;
