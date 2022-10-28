@@ -30,3 +30,10 @@ for i in /home/* `ls -1b`; do c=`find $i -type f |wc -l`; echo "$c $i"; done;
 
 vòng lặp:
 while sleep 1; do ./better-top.sh; done;
+
+
+# Lệnh grep
+```
+cat /etc/fstab |grep -v "^#" |grep -v "^$"
+```
+Bỏ các dòng có bắt đầu bằng # và $
