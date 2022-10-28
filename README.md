@@ -33,7 +33,8 @@ while sleep 1; do ./better-top.sh; done;
 
 
 # Lệnh grep
+Bỏ các dòng có bắt đầu bằng # và $
 ```
 cat /etc/fstab |grep -v "^#" |grep -v "^$"
 ```
-Bỏ các dòng có bắt đầu bằng # và $
+
