@@ -3,11 +3,15 @@
 Configure KeepAlived on webserver-01:
 
 yum install -y keepalived
+
 echo "net.ipv4.ip_nonlocal_bind = 1" >> /etc/sysctl.conf
+
 sysctl -p
 
 cd /etc/keepalived/
+
 mv keepalived.conf keepalived.conf.org
+
 vi keepalived.conf
 
 Add following directives and save.
@@ -41,7 +45,10 @@ vrrp_instance VI_1 {
 ```
 
 Start and enable keepalived service.
-systemctl start keepalived ; systemctl enable keepalived
+
+systemctl start keepalived
+
+systemctl enable keepalived
 
 Check ip Address of the server
 ip addr | grep "inet" | grep "eno16777728"
