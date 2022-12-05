@@ -1,14 +1,23 @@
 CÀI ĐẶT APACHE KAFKA TRÊN CENTOS 7
 
 Mục lục
+
 Apache Kafka là gì?
+
 Chuẩn bị môi trường
+
 Cài đặt OpenJDK8
+
 Tạo user kafka
+
 Cài đặt và giải nén Kafka Binaries
+
 Cấu hình Kafka Server
+
 Tạo Systemd Unit file và khởi động Kafka Server
+
 Kiểm tra cài đặt
+
 Kết luận
 
 **Apache Kafka là gì?**
