@@ -18,7 +18,7 @@ Tạo Systemd Unit file và khởi động Kafka Server
 
 Kiểm tra cài đặt
 
-Kết luận
+
 
 **Apache Kafka là gì?**
 
