@@ -38,3 +38,9 @@ Bỏ các dòng có bắt đầu bằng # và $
 cat /etc/fstab |grep -v "^#" |grep -v "^$"
 ```
 
+# Testing UDP port connectivity wit nc command
+```
+nc -z -v -u [hostname/IP address] [port number]
+nc -z -v -u 192.168.10.12 123
+Connection to 192.118.20.95 123 port [udp/ntp] succeeded!
+```
