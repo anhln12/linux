@@ -112,7 +112,7 @@ make install
 
 # Thiết lập file cấu hình cho Nginx
 ```
-[root@thanhdd ~]# cd /usr/lib64/nginx/modules
+cd /usr/lib64/nginx/modules
 # Tạo file shortcut /etc/nginx/modules
 ln -s /usr/lib64/nginx/modules /etc/nginx/modules
 # vi thử vào file config
