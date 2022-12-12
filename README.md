@@ -44,3 +44,12 @@ nc -z -v -u [hostname/IP address] [port number]
 nc -z -v -u 192.168.10.12 123
 Connection to 192.118.20.95 123 port [udp/ntp] succeeded!
 ```
+
+# How To SCP Using Port Other Than 22
+```
+scp -P 80 -r * vt_admin@183.182.125.18:/storage/mooclao/
+
+ssh user@host -p 1234
+scp -P 1234 file user@remote.host:/remote/location/
+scp -P 1234 user@remote.host:/remote/location/file ./
+```
