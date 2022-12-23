@@ -31,7 +31,7 @@ curl -s --data "text=$1" --data "chat_id=$GROUP_ID" 'https://api.telegram.org/bo
 ```
 # To run this script we should add permission
 ```
-hmod +x telegram-send.sh
+chmod +x telegram-send.sh
 ```
 
 # Now you can test it
