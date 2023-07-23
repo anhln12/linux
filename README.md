@@ -53,3 +53,7 @@ ssh user@host -p 1234
 scp -P 1234 file user@remote.host:/remote/location/
 scp -P 1234 user@remote.host:/remote/location/file ./
 ```
+# while
+```
+while sleep 0.01; do curl -sS 'http://'\ &> /dev/null; done
+```
