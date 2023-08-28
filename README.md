@@ -57,3 +57,8 @@ scp -P 1234 user@remote.host:/remote/location/file ./
 ```
 while sleep 0.01; do curl -sS 'http://'\ &> /dev/null; done
 ```
+7. Gen Private - Public Key
+
+openssl genrsa -out mykey.pem 1024
+
+openssl rsa -in mykey.pem -pubout > mykey.pub
