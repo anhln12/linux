@@ -62,3 +62,8 @@ while sleep 0.01; do curl -sS 'http://'\ &> /dev/null; done
 openssl genrsa -out mykey.pem 1024
 
 openssl rsa -in mykey.pem -pubout > mykey.pub
+
+# Sum file
+```
+du -ah | grep 2024-02-01 | awk 'BEGIN {sum=0} {sum+=$1} END {print sum}'
+```
