@@ -15,12 +15,12 @@ Make sure to include the beginning and end tags on each certificate. The result 
 (Your Private Key: your_domain_name.key)
 -----END RSA PRIVATE KEY-----
 -----BEGIN CERTIFICATE-----
-(Your Primary SSL certificate: your_domain_name.crt) => 2.intermediate.cer
+(Your Primary SSL certificate: your_domain_name.crt) =>thuho-uds.xxx.com.vn.cer
 -----END CERTIFICATE-----
 -----BEGIN CERTIFICATE-----
 (Your Intermediate certificate: DigiCertCA.crt) => 1.Root CA.cer
 -----END CERTIFICATE-----
 -----BEGIN CERTIFICATE-----
-(Your Root certificate: TrustedRoot.crt) =>thuho-uds.xxx.com.vn.cer
+(Your Root certificate: TrustedRoot.crt) => 2.intermediate.cer
 -----END CERTIFICATE-----
 ```
