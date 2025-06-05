@@ -7,8 +7,8 @@ BOT_TOKEN=""
 CHAT_ID=""
 
 now=$(date '+%Y-%m-%d %H:%M:%S')
-SYSTEM="DATABASE POSTGRES FINTECH"
-IP="10.30.17.44"
+SYSTEM="DATABASE POSTGRES"
+IP=""
 
 # --- Hàm gửi tin nhắn Telegram ---
 send_telegram() {
