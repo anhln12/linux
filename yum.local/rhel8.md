@@ -14,35 +14,26 @@ mount -o loop rhel-8.0-x86_64-dvd.iso /u01/rhel
 
 In casse yuu have RHEL 8 installation DVD
 ```
-mount /dev/sr0  /opt
-```
-
-Step 2: Copy Media.Repo file from Mounted Directory To /etc/yum.repos.d
-```
-cp -v /u01/rhel/media.repo /etc/yum.repos.d/rhel8.repo
-chmod 644 /etc/yum.repos.d/rhel8.repo
+mount /dev/sr0 /mnt/media
 ```
 
 Step 3: Add Repository Entires In "/etc/yum.repos.d/rhel8.repo"
 
 Edit rhel8.repo file and add the following contents
 ```
-vi /etc/yum.repos.d/rhel8.repo
-[InstallMedia-BaseOS]
-name=Red Hat Enterprise Linux 8 - BaseOS
-metadata_expire=-1
-gpgcheck=1
+sudo tee /etc/yum.repos.d/rhel8-dvd.repo <<EOF
+[BaseOS]
+name=RHEL8 BaseOS
+baseurl=file:///mnt/media/BaseOS/
 enabled=1
-baseurl=file:///opt/BaseOS/
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+gpgcheck=0
 
-[InstallMedia-AppStream]
-name=Red Hat Enterprise Linux 8 - AppStream
-metadata_expire=-1
-gpgcheck=1
+[AppStream]
+name=RHEL8 AppStream
+baseurl=file:///mnt/media/AppStream/
 enabled=1
-baseurl=file:///opt/AppStream/
-gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+gpgcheck=0
+EOF
 ```
 
 Step 4: Clean Yum/DNF and Subcription 
