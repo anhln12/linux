@@ -141,3 +141,42 @@ Scan full server
 ```
 sudo clamdscan --multiscan --fdpass --exclude-dir="^/sys|^/proc|^/dev|^/run|^/mnt|^/media|^/snap" / > /var/log/clamav/fullscan-$(date +%F).log
 ```
+script đang chạy
+```
+[root@ ~]# cat /usr/local/bin/clamscan-telegram.sh
+cat: sh: No such file or directory
+#!/bin/bash
+
+# Set up variables
+
+NOTIFY_CHAT_ID="-973615602"
+BOT_TOKEN=""
+SCAN_DIR="/*"
+
+# Update virus definitions
+
+sudo freshclam
+
+# Perform virus scan
+
+result=$(sudo clamscan -r $SCAN_DIR --infected)
+
+# Check if virus is found
+
+a=$(echo "$result" | grep "Infected files: 0");
+if [[ "$a" == ""  ]]; then
+# Send notification to Telegram
+message="🦠Virus found on $HOSTNAME!🧪🛡️
+$result"
+
+# infected_files=$(echo "$result" | grep -oP '(?<=Infected files: ).*' | tr -d '\r' | tr '\n' ' ')
+for file in $infected_files; do
+    if [[ "$file" != "" ]]; then
+        dir=$(dirname "$file")
+        message="$message
+    $file File Bị Nhiễm $dir"
+    fi
+done
+curl -s -X POST <https://api.telegram.org/bot$BOT_TOKEN/sendMessage> -d chat_id=$NOTIFY_CHAT_ID -d text="$message"
+fi
+```
