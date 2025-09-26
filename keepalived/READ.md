@@ -128,3 +128,7 @@ systemctl stop keepalived
 ```
 
 ➡️ Node2 sẽ tự động nhận cả VIP1 + VIP2
+
+💡 Tối ưu & Lưu ý
+- Mở firewalld protocol VRRP: ufw allow proto vrrp
+
