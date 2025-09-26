@@ -106,9 +106,25 @@ systemctl status keepalived
 2.4 Kiểm tra
 * Trên node 1
 ```
-ip addr show eth0 | grep 192.168.10
+ip addr show eth0 | grep 192.168.100
 ```
 
 - Bạn sẽ thấy:
   + VIP 1 (192.168.10.100) có trên Node 1
   + VIP 2 (192.168.10.101) không có (do Node2 giữ)
+ 
+* Trên node 2
+```
+ip addr show eth0 | grep 192.168.101
+```
+
+- Bạn sẽ thấy:
+  + VIP 1 (192.168.10.100) không có trên Node 2 (do Node 1 giữ)
+  + VIP 2 (192.168.10.101) có
+
+💡 Nếu tắt Keepalived trên Node1:
+```
+systemctl stop keepalived
+```
+
+➡️ Node2 sẽ tự động nhận cả VIP1 + VIP2
