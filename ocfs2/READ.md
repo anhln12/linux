@@ -68,6 +68,7 @@ netstat -npl | grep 7777
 5. Mount trên các node
 ```
 mount -t ocfs2 -o _netdev /dev/sdX /mnt/ocfs2
+mount.ocfs2 /dev/data_vg_stream/data_lv_stream /storage 
 ```
 
 Note:
