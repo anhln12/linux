@@ -75,8 +75,9 @@ Note:
 - Cluster name trong /etc/ocfs2/cluster.conf phải giống nhau trên tất cả các node
 - Lỗi mount.ocfs2: Cluster name is invalid while trying to join the group do mình chưa chuyển config O2CB_ENABLED=true trong file config /etc/default/o2cb
 - file config
-  ```
-  /etc/ocfs2/cluster.conf 
+```
+/etc/ocfs2/cluster.conf
+
 cluster:
         name = ocfs2
         node_count = 4
@@ -108,5 +109,5 @@ node:
         ip_port = 7777
         ip_address = 10.0.133.239
         name = STREAMING-04
-  ```
+```
 
