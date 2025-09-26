@@ -6,5 +6,6 @@ KHác với NFS (client-server) hay rsync, OCFS2 cho phép các node truy cập 
 
 
 |Tính năng| Mô tả|
+
 | Cluster aware| Nhiều node cùng mount cùng một volume r/w trực tiếp|
 
