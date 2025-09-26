@@ -4,8 +4,10 @@ KHác với NFS (client-server) hay rsync, OCFS2 cho phép các node truy cập 
 
 Đặc điểm:
 
-
-|Tính năng| Mô tả|
-
-| Cluster aware| Nhiều node cùng mount cùng một volume r/w trực tiếp|
+| Tính năng           | Mô tả                                                |
+|----------------------|------------------------------------------------------|
+| Cluster aware        | Nhiều node cùng mount cùng một volume và đọc/ghi trực tiếp |
+| Direct block access  | Truy cập trực tiếp block device chung (SAN, iSCSI, DRBD)   |
+| Distributed Locking  | Sử dụng cơ chế khóa phân tán để đảm bảo tính nhất quán    |
+| Journaling           | Ghi log giống ext4/xfs, giúp phục hồi khi sự cố           |
 
