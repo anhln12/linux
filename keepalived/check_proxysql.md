@@ -51,7 +51,7 @@ vrrp_instance VI_1 {
     state MASTER
     interface eth0
     virtual_router_id 51
-    priority 150
+    priority 110
     advert_int 1
     authentication {
         auth_type PASS
@@ -119,7 +119,7 @@ vrrp_instance VI_2 {
     state MASTER
     interface eth0
     virtual_router_id 52
-    priority 150
+    priority 110
     advert_int 1
     authentication {
         auth_type PASS
