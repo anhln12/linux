@@ -1,3 +1,4 @@
+```
 [root@wap01 ~]# grep -vE '^\s*(#|$)' /etc/vsftpd/vsftpd.conf
 anonymous_enable=NO
 local_enable=YES
@@ -23,7 +24,8 @@ pasv_enable=YES
 pasv_min_port=30000
 pasv_max_port=31000
 session_support=YES
-
+```
+```
 [root@wap01 ~]# cat /etc/vsftpd/user_list
 # vsftpd userlist
 root
@@ -32,3 +34,4 @@ daemon
 adm
 lp
 sync
+```
