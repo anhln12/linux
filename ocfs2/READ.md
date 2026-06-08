@@ -33,6 +33,12 @@ o2cb add-node mycluster node2 --ip 10.0.0.2
 o2cb add-node mycluster node3 --ip 10.0.0.2
 o2cb add-node mycluster node4 --ip 10.0.0.2
 o2cb configure
+
+## Fix
+dpkg-reconfigure ocfs2-tools
+systemctl restart o2cb
+systemctl restart ocfs2
+mount.ocfs2 /dev/vdb /media
 ```
 
 3. Tạo filesystem trên shared device (chạy 1 lần)
