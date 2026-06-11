@@ -24,7 +24,7 @@ apt update && apt install -y keepalived
 yum install -y keepalived
 ```
 
-2.2 Cấu hình /etc/keepalived/keepalived.cof
+2.2 Cấu hình /etc/keepalived/keepalived.conf
 
 * Node 1
 ```
