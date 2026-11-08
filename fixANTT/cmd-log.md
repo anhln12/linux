@@ -1,4 +1,10 @@
 Có 3 mảnh ghép: hook (sinh log), rsyslog (nhận log), skel (để user mới tự có hook)
+
+```
+touch /var/log/cmdlog.log
+chattr +a /var/log/cmdlog.log
+```
+
 Bước 1: Tạo file dòng hook (heredoc nháy đơn để tránh lỗi dấu nháy lồng nhau)
 ```
 cat > /tmp/cmdlog.line <<'EOF'
