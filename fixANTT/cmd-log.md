@@ -18,7 +18,7 @@ done
 ```
 Bước 4: Phía nhận rsyslog
 ```
-echo 'local6.*    /var/log/cmdlog.log' > /etc/rsyslog.conf
+echo 'local6.*    /var/log/cmdlog.log' > /etc/rsyslog.d/40-cmdlog.conf
 grep -n local6 /etc/rsyslog.conf     # nếu đã có dòng local6 thì bỏ một trong hai, tránh ghi đôi
 systemctl restart rsyslog
 ```
