@@ -33,6 +33,7 @@ Bước 5: Logrotate
 ```
 cat > /etc/logrotate.d/cmdlog <<'EOF'
 /var/log/cmdlog.log {
+    su root syslog
     weekly
     rotate 8
     compress
